@@ -56,6 +56,13 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+**Explanation:**
+This Python script simulates an IoT device sending telemetry data to an Azure IoT Hub. 
+It uses a connection string to authenticate and connects to the IoT Hub via the `IoTHubDeviceClient`. 
+The script generates random temperature and humidity data through the `get_telemetry` function and continuously sends this data as messages to the IoT Hub every 10 seconds. 
+It handles keyboard interrupts (e.g., Ctrl+C) to stop the loop gracefully and disconnects the client.
+
 ### 5. Run the Script
 Execute the script to start sending telemetry data to your IoT Hub.
 
@@ -95,6 +102,10 @@ FROM
 GROUP BY
     IoTHub.ConnectionDeviceId, TumblingWindow(second, 60)
 ```
+**Explanation:** This query processes streaming data in Azure Stream Analytics. 
+It calculates the **average temperature and humidity** from incoming telemetry data grouped by device `IoTHub.ConnectionDeviceId` over 60-second intervals using a tumbling window. 
+The results include the device ID, the computed averages, and the event timestamp `System.Timestamp`. 
+The processed data is then written to an output sink specified by `output`. 
 #### 5. Save and Start the Job
 Save the query and click Start on the Stream Analytics job.
 
