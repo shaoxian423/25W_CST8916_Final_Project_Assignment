@@ -134,9 +134,13 @@ Screenshots of each step are stored in `/screenshots/` folder:
 ## 🚀 Status Checklist
 
 - [x] Simulated IoT data generator using Python
+![System Architecture](.screenshots/Check List/pythonG.jpg)
 - [x] Azure IoT Hub receives real-time telemetry
-- [x] Stream Analytics aggregates data every 5 mins
+![System Architecture](.screenshots/Check List/IoTd.jpg)
+- [x] Stream Analytics aggregates data every 5 mins(change to 1 min for test)
+![System Architecture](.screenshots/Check List/stream5.jpg)
 - [x] Aggregated data exported to Blob in JSON format
+![System Architecture](.screenshots/Check List/json.jpg)
 
 ---
 
